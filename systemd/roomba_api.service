@@ -1,0 +1,10 @@
+[Unit]
+Description=Roomba lirc API
+After=multi-user.target
+
+[Service]
+ExecStart=/usr/bin/python3.7 -m roomba_rpi_ir_api
+Type=idle
+
+[Install]
+WantedBy=multi-user.target
