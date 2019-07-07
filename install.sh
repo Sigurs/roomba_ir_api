@@ -10,7 +10,7 @@ fi
 apt update && apt upgrade -y
 
 # Install lirc
-apt install lirc -y
+apt install lirc python3-venv -y
 
 # Configuration of lirc is platform specific, so not including here. Do it yourself.
 ##Enable service
@@ -23,3 +23,6 @@ apt install lirc -y
 
 # Add user.
 useradd roomba_api
+
+# as user
+python3 -m venv venv_roomba_api
