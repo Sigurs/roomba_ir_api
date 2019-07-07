@@ -5,7 +5,8 @@ After=multi-user.target
 [Service]
 User=roomba_api
 Group=roomba_api
-ExecStart=cd ~/roomba_ir_api && ~/venv_roomba_api/bin/gunicorn --bind 0.0.0.0:81234 roomba_ir_api.app
+WorkingDirectory=/home/roomba_api/roomba_ir_api/
+ExecStart=/home/roomba_api/venv_roomba_api/bin/gunicorn --bind 0.0.0.0:8124 roomba_ir_api.app
 Type=idle
 
 [Install]
